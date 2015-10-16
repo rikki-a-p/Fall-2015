@@ -42,12 +42,13 @@ foreach ($frequencies as $value => $line){
 echo $value."\t".$line."\n";
 }
 
+$text = $value."\t".$line."\n";
+
 # in your loop, write each of those lines to the writing file, slide 19 has an output file example
 # with a line like this fwrite($fhw, $text) or die("Could not write to file");
 
 fwrite($fhw, $text) or die("Could not write to file");
 
-$text = $value."\t".$line."\n";
 # end the loop
 # close file
 fclose($fhw);
