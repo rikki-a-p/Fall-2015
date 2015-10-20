@@ -39,15 +39,12 @@ $fhw = fopen("tagparser.txt", 'w') or die("Failed to create file");
 
 foreach ($frequencies as $value => $line){
 	
-echo $value."\t".$line."\n";
-}
-
 $text = $value."\t".$line."\n";
+fwrite($fhw, $text) or die("Could not write to file");
+}
 
 # in your loop, write each of those lines to the writing file, slide 19 has an output file example
 # with a line like this fwrite($fhw, $text) or die("Could not write to file");
-
-fwrite($fhw, $text) or die("Could not write to file");
 
 # end the loop
 # close file
